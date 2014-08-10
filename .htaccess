@@ -1,0 +1,11 @@
+<IfModule mod_rewrite.c>
+Options +FollowSymlinks
+Options -MultiViews
+RewriteEngine on
+IndexIgnore *
+
+RewriteCond %{REQUEST_FILENAME} !-d 
+RewriteRule ^(.+)/$ $1 [R=301,L]
+RewriteRule ^guild/([^/]+)$ index.php?g=$1
+RewriteRule ^guild/([^/]+)$ index.php?g=$1
+</ifModule>
